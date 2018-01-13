@@ -1,0 +1,23 @@
+{
+  "name": "constructor-hangman",
+  "version": "1.0.0",
+  "description": "The completed game should be able to receive user input using the inquirer or prompt npm packages.",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilippW73/Constructor-Hangman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilippW73/Constructor-Hangman/issues"
+  },
+  "homepage": "https://github.com/PhilippW73/Constructor-Hangman#readme",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "prompt": "^1.0.0"
+  }
+}
