@@ -41,9 +41,9 @@ function Word(word) {
 	this.displayLetters = function() {
 // for loop
 // if hide is true, show underscore.. if not, display letter value
-		for (var i = 0; i < letters.length; i++) {
-			if (this.hide === false) {
-				return this.letter;
+		for (var i = 0; i < this.letters.length; i++) {
+			if (this.letters[i].hide === false) {
+				return this.letters[i].letter;
 			} else {
 				return "_";
 			};

@@ -10,8 +10,6 @@ var newWord = new Word(chosenWord);
 //console.log(newWord);
 var wrongGruesses = [];
 
-//counters
-
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
@@ -26,16 +24,21 @@ function startGame () {
 	  }
 	]).then(function(confirm) {
 
-		console.log("confirm...");
-		console.log(confirm);
+		//onsole.log("confirm...");
+		//console.log(confirm);
 
 	  if (confirm.wantToPlay) {
 		console.log(newWord);
-	    
 	    newWord.chop();
+
+	    var showWord = newWord.displayLetters();
+	   	console.log(showWord);
+	    
 	    console.log("starting round...");
 	    console.log("new word chop.......");
+	    
 	    roundStart();
+
 	  } else {
 	    console.log("Thank you for visiting");
 	  }
@@ -66,59 +69,28 @@ function roundStart () {
 	  else {
 	    console.log("wrong guess");
 	  }
+	  numGuesses--;
+	  console.log(numGuesses);
+
+	  if(numGuesses === 0) {
+	  	lossCounter++;
+	  	console.log("Sorry, Loser");
+	  	roundComplete();
+	  } else {
+	  	roundStart();
+	  }
+
+	  if (word is complete) { 
+		winCounter++
+		console.log("Congratulations.. You win")
+		roundComplete()
+		}
 	});
-
-
 }
 
-// if (guess === letter in word) {
-	// show letter
-	// };
-// else {
-	//show "_"
-	// };
-// numGuesses--;
-// if (numGuesses === 0) {
-	// lossCounter++;
-	// console.log("Sorry, you lose");
-	// roundComplete();
-// else {roundStart()};
-
-// if (word is complete) { 
-	// winCounter++
-	// console.log("Congratulations.. You win")
-	// roundComplete()
-	// }
-	
-// roundComplete()
-	// console.log("winCounter" / "lossCounter")
-	// startGame()
-
-
-
-// roundComplete() function
-// Here we will have all of the code that needs to be run after each guess is made
 function roundComplete() {
-
-  // First, log an initial status update in the console telling us how many wins, losses, and guesses are left.
-  console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
-
-  
-  // If we have gotten all the letters to match the solution...
-  // if 
-    
-  //   winCounter++;
-  //   alert("You win!");
-  // }
-
-  // // If we've run out of guesses..
-  // else if 
-
-    
-    // Restart the game.
-    //startGame();
-  //}
-
+  console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter);
+  startGame();
 }
 
 
