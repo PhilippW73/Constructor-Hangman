@@ -1,5 +1,6 @@
 var inquirer = require('inquirer');
 var prompt = require('prompt');
+//var letterArray = require("./hangman.js");
 
 var Letter = require("./letter.js");
 
@@ -15,11 +16,9 @@ function Word(word) {
 		console.log(lettersInChosenWord);
 
 		for (var i = 0; i < lettersInChosenWord.length; i++) {
-			var letterArray = new Letter(lettersInChosenWord[i]);
-			this.letters.push(letter);
+			var currentLetter = new Letter(lettersInChosenWord[i]);
+			this.letters.push(currentLetter);
 		};
-
-
 
 		console.log(this.letters);
 	};
@@ -27,21 +26,29 @@ function Word(word) {
 	this.checkLetterGuess = function(letter) {
 // loops through letters array of word and match value
 // if matched return true,  else return false	
+		console.log("what is this.....")
+		console.log(this)
 
-
-
-	}
+		for (var i = 0; i < this.letters.length; i++) {
+			if(letter === this.letters[i].letter) {
+				return true;
+			} 
+		};
+		return false;
+	};
 
 	this.displayLetters = function() {
 // for loop
-//if hide is true, show underscore.. if not, display letter value
-
+// if hide is true, show underscore.. if not, display letter value
+		for (var i = 0; i < Things.length; i++) {
+			Things[i]
+		}
 
 
 	}
 };
 
-
+//letterArray = [{letter:T, hide:true}....]
 
 
 
