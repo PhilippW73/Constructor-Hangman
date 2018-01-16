@@ -7,7 +7,7 @@ var Letter = require("./letter.js");
 function Word(word) {
 	console.log("creating word........");
 	this.word = word;
-	this.hide = "_'";
+	this.noDisplay = "_'";
 	this.letters = [];
 
 	this.chop = function(){
@@ -32,6 +32,7 @@ function Word(word) {
 		for (var i = 0; i < this.letters.length; i++) {
 			if(letter === this.letters[i].letter) {
 				return true;
+				this.hide = false;
 			} 
 		};
 		return false;
@@ -40,22 +41,14 @@ function Word(word) {
 	this.displayLetters = function() {
 // for loop
 // if hide is true, show underscore.. if not, display letter value
-		for (var i = 0; i < Things.length; i++) {
-			Things[i]
-		}
-
-
-	}
+		for (var i = 0; i < letters.length; i++) {
+			if (this.hide === false) {
+				return this.letter;
+			} else {
+				return "_";
+			};
+		};
+	};
 };
-
-//letterArray = [{letter:T, hide:true}....]
-
-
-
-// just used for testing purpose
-//var chosenWord = new Word("Top");
-
-
-//chosenWord.chop();
 
 module.exports = Word;
