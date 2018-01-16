@@ -1,14 +1,38 @@
-# Constructor-Hangman
+# Constructor-Hangman with Node.js
 
-The completed game should be able to receive user input using the inquirer or prompt npm packages.
+Files:	(1) - hangman.js
+		(2) - letter.js
+		(3) - word.js
+		
+Json:	(1) - package-lock.json
+		(2) - package.json
 
-Feel free to use as many different types of constructor functions as you are able to, but at a minimum, you must create the following constructor functions:
 
-Word: Used to create an object representing the current word the user is attempting to guess. This should contain word specific logic and data.
+Technologies used: 
+	- npm inquirer
 
-Letter: Used for each letter in the current word. Each letter object should either display an underlying character, or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. This should contain letter specific logic and data.
+Design used: 
+	- Constructor
+	- Object oriented programming
 
-You must keep track of the user's remaining guesses and prompt the user if they would like to end the game if none remain.
+Start the game: enter "node hangmang.js"
 
-Each constructor function should be in it's own file and be exported and required wherever needed.
+Rules: 
+(1) User has to guess a word. Topic is movies
+(2) In order to guess the whole word, user is able to guess one letter per round
+(2) 15 Guesses possible
+(3) If one letter is chosen correctly: 
+		- Letter will show up 	
+		- Guesses left -1
+		- Game continues
+
+(4) If no more guesses are possible
+		- game stops and user loses
+		- loss counter +1
+		- New Game will start if user wants to play again
+
+(5) If user guessed all letters correctly
+		- User wins
+		- Win counter +1
+		- New Game will start if user wants to play again
 

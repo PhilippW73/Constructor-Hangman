@@ -2,6 +2,11 @@ var inquirer = require('inquirer');
 var prompt = require('prompt');
 var Word = require("./word.js");
 
+console.log("************************************");
+console.log("******** WELCOME TO HANGMAN ********");
+console.log("*********** TOPIC: MOVIES **********");
+console.log("************************************");
+
 var wordsList = ["Top Gun", "Schindlers List", "Rocky", "One Flew Over the Cuckoos Nest", "Batman", "Groundhog Day"];
 var chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 
