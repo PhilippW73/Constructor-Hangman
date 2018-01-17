@@ -1,6 +1,9 @@
-  function Letter(letter){
-	this.letter = letter;
-	this.hide = true;
+function Letter(letter){
+this.letter = letter;
+this.hide = true;
+
+
 }
 
 module.exports = Letter;
+

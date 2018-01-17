@@ -19,11 +19,19 @@ Start the game: enter "node hangmang.js"
 
 Rules: 
 (1) User has to guess a word. Topic is movies
+
 (2) In order to guess the whole word, user is able to guess one letter per round
-(2) 15 Guesses possible
+
+(2) 9 Guesses possible
+
 (3) If one letter is chosen correctly: 
 		- Letter will show up 	
-		- Guesses left -1
+		- Guesses --> remains the same
+		- Game continues
+
+(4) If one letter is chosen incorrectly: 
+		- underlines will stay 	
+		- Guesses -1
 		- Game continues
 
 (4) If no more guesses are possible
